@@ -51,6 +51,17 @@ public abstract sealed class Result<T> permits Result.Problematic, Result.Some, 
         return this;
     }
 
+    public final Result<T> ifPresentOrElse(Consumer<T> ifPresent, Runnable ifNotPresent) {
+        if (isPresent()) ifPresent.accept(this.value);
+        else ifNotPresent.run();
+        return this;
+    }
+
+    public final T orElse(T value) {
+        if (this.value == null) return value;
+        return this.value;
+    }
+
     @Getter
     public static non-sealed class Problematic<T> extends Result<T> {
         private final Problem problem;
