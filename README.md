@@ -1,10 +1,10 @@
-# Problemo - Eine Library um Probleme zu lösen
+# Problemo - A library for solving problems
 
-**Problemo ist dafür da, Error-Handling einfacher zu machen.**
+**Problemo was made to make error-handling more easier.**
 
-Mithilfe vieler Methoden kannst du viele Szenarios in deinem Programm abdecken.
+Using many methods, you can cover many scenarios in your program.
 
-Hier ein paar Beispiele:
+Here a few examples:
 
 ```java
 public Result<UUID> parseUUID(String uuidString) {
